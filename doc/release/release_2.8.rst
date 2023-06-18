@@ -128,7 +128,7 @@ Contributors
 
 - Ross Barnowski
 - Riccardo Bucco
-- Matthias Bussonnier
+- Matthias Buissonnier
 - FabianBall
 - Martha Frysztacki
 - Chris Keefe

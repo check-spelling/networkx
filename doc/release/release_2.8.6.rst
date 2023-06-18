@@ -63,7 +63,7 @@ Contributors
 - Tanmay Aeron
 - Ross Barnowski
 - Kevin Brown
-- Matthias Bussonnier
+- Matthias Buissonnier
 - Tigran Khachatryan
 - Dhaval Kumar
 - Jarrod Millman
