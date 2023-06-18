@@ -413,7 +413,7 @@ class TestContraction:
         assert nx.is_isomorphic(actual, expected)
 
     def test_nonexistent_edge(self):
-        """Tests that attempting to contract a non-existent edge raises an
+        """Tests that attempting to contract a nonexistent edge raises an
         exception.
 
         """
