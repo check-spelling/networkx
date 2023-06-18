@@ -84,17 +84,17 @@ def enumerate_all_cliques(G):
     queue = deque(([u], sorted(nbrs[u], key=index.__getitem__)) for u in G)
     # Loop invariants:
     # 1. len(base) is nondecreasing.
-    # 2. (base + cnbrs) is sorted with respect to the iteration order of G.
-    # 3. cnbrs is a set of common neighbors of nodes in base.
+    # 2. (base + cnbors) is sorted with respect to the iteration order of G.
+    # 3. cnbors is a set of common neighbors of nodes in base.
     while queue:
-        base, cnbrs = map(list, queue.popleft())
+        base, cnbors = map(list, queue.popleft())
         yield base
-        for i, u in enumerate(cnbrs):
+        for i, u in enumerate(cnbors):
             # Use generators to reduce memory consumption.
             queue.append(
                 (
                     chain(base, [u]),
-                    filter(nbrs[u].__contains__, islice(cnbrs, i + 1, None)),
+                    filter(nbrs[u].__contains__, islice(cnbors, i + 1, None)),
                 )
             )
 
@@ -902,7 +902,7 @@ def max_weight_clique(G, weight="weight"):
            algoritmo de branch and bound para o problema da clique máxima
            ponderada.  Proceedings of XLVII SBPO 1 (2015).
 
-    .. [2] Warrent, Jeffrey S, Hicks, Illya V.: Combinatorial Branch-and-Bound
+    .. [2] Warren, Jeffrey S, Hicks, Illya V.: Combinatorial Branch-and-Bound
            for the Maximum Weight Independent Set Problem.  Technical Report,
            Texas A&M University (2016).
     """

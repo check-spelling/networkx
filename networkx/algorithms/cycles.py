@@ -596,7 +596,7 @@ def chordless_cycles(G, length_bound=None):
     #    must not construct longer cycles along (u, v).
     # 2. If G is not directed, then a pair of parallel edges between (u, v) is a
     #    chordless cycle unless there exists a third (or more) parallel edge.
-    # 3. If G is directed, then parallel edges do not form cyles, but do
+    # 3. If G is directed, then parallel edges do not form cycles, but do
     #    preclude back-edges from forming cycles (handled in the next section),
     #    Thus, if an edge (u, v) is duplicated and the reverse (v, u) is also
     #    present, then we remove both from F.
@@ -1130,7 +1130,7 @@ def _min_cycle(G, orth, weight=None):
         n: all_shortest_pathlens[n][nnodes + n] for n in range(nnodes)
     }
 
-    # Now compute shortest paths in T, which translates to cyles in G
+    # Now compute shortest paths in T, which translates to cycles in G
     start = min(cross_paths_w_lens, key=cross_paths_w_lens.get)
     end = nnodes + start
     min_path = nx.shortest_path(T, source=start, target=end, weight="weight")

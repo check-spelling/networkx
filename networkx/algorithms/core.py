@@ -336,7 +336,7 @@ def k_corona(G, k, core_number=None):
     Raises
     ------
     NetworkXError
-        The k-cornoa is not defined for graphs with self loops or
+        The k-corona is not defined for graphs with self loops or
         parallel edges.
 
     Notes

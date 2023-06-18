@@ -32,7 +32,7 @@ modes = {"dot": cc_dot, "min": cc_min, "max": cc_max}
 def latapy_clustering(G, nodes=None, mode="dot"):
     r"""Compute a bipartite clustering coefficient for nodes.
 
-    The bipartie clustering coefficient is a measure of local density
+    The bipartite clustering coefficient is a measure of local density
     of connections defined as [1]_:
 
     .. math::
@@ -74,7 +74,7 @@ def latapy_clustering(G, nodes=None, mode="dot"):
         is all nodes in G.
 
     mode : string
-        The pariwise bipartite clustering method to be used in the computation.
+        The pairwise bipartite clustering method to be used in the computation.
         It must be "dot", "max", or "min".
 
     Returns
@@ -163,7 +163,7 @@ def average_clustering(G, nodes=None, mode="dot"):
         bipartite sets.
 
     mode : string
-        The pariwise bipartite clustering method.
+        The pairwise bipartite clustering method.
         It must be "dot", "max", or "min"
 
     Returns
