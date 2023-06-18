@@ -84,17 +84,17 @@ def enumerate_all_cliques(G):
     queue = deque(([u], sorted(nbrs[u], key=index.__getitem__)) for u in G)
     # Loop invariants:
     # 1. len(base) is nondecreasing.
-    # 2. (base + cnbrs) is sorted with respect to the iteration order of G.
-    # 3. cnbrs is a set of common neighbors of nodes in base.
+    # 2. (base + cnbors) is sorted with respect to the iteration order of G.
+    # 3. cnbors is a set of common neighbors of nodes in base.
     while queue:
-        base, cnbrs = map(list, queue.popleft())
+        base, cnbors = map(list, queue.popleft())
         yield base
-        for i, u in enumerate(cnbrs):
+        for i, u in enumerate(cnbors):
             # Use generators to reduce memory consumption.
             queue.append(
                 (
                     chain(base, [u]),
-                    filter(nbrs[u].__contains__, islice(cnbrs, i + 1, None)),
+                    filter(nbrs[u].__contains__, islice(cnbors, i + 1, None)),
                 )
             )
 
