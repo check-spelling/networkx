@@ -100,7 +100,7 @@ class TestMaxflowMinCutCommon:
 
     def test_graph2(self):
         # A more complex undirected graph
-        # adapted from www.topcoder.com/tc?module=Statc&d1=tutorials&d2=maxFlow
+        # adapted from www.topcoder.com/tc?module=Static&d1=tutorials&d2=maxFlow
         G = nx.Graph()
         G.add_edge("x", "a", capacity=3.0)
         G.add_edge("x", "b", capacity=1.0)
@@ -189,7 +189,7 @@ class TestMaxflowMinCutCommon:
 
     def test_digraph4(self):
         # A more complex directed graph
-        # from www.topcoder.com/tc?module=Statc&d1=tutorials&d2=maxFlow
+        # from www.topcoder.com/tc?module=Static&d1=tutorials&d2=maxFlow
         G = nx.DiGraph()
         G.add_edge("x", "a", capacity=3.0)
         G.add_edge("x", "b", capacity=1.0)
